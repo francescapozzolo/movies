@@ -16,7 +16,7 @@ export default function MovieLibrary() {
     <div className="MovieLibrary">
       <header className="ML-header">
         <img src={logo} className="ML-logo" alt="logo" />
-        <h1 className="ML-title">Movies</h1>
+        <h1 className="ML-title font-title">Movies</h1>
       </header>
       <div className="ML-intro">
         { movies.length && <MoviesList movies={movies}/> }
