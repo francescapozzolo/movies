@@ -1,0 +1,55 @@
+.header {
+  height: 100%;
+  color: white;
+  position: fixed;
+  width: 100%;
+  clip-path: polygon(30% 0, 35% 50%, 29% 100%, 0% 100%, 0 51%, 0% 0%);
+  background-color: black;
+  backdrop-filter: blur(80px);
+  z-index: 1;
+}
+
+.nav-bar{
+  padding-top: 2em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  height: 100%;
+}
+
+.container-avatar-title{
+  display: flex;
+  align-items: center;
+}
+
+#avatar{
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  margin-right: 2em;
+}
+
+.container-options{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.img-preview-movie{
+  align-self: flex-end;
+  width: 25vw;
+  background-color: white;
+  height: 70vh;
+  box-shadow: 0px -1px 28px 43px rgba(0,0,0,1) inset;
+  -webkit-box-shadow: 0px -1px 28px 43px rgba(0,0,0,1) inset;
+  -moz-box-shadow: 0px -1px 28px 43px rgba(0,0,0,1) inset;
+  background-image: url("https://www.muycomputer.com/wp-content/uploads/2021/08/Spider-Man.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-self:left;
+}

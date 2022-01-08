@@ -12,13 +12,8 @@ export default function MovieLibrary() {
   }, [])
   const movies = useSelector(getMovies)
   return(
-    <div className="MovieLibrary">
-      <header className="ML-header">
-        <img src={logo} className="ML-logo" alt="logo" />
-        <h1 className="ML-title">Movies</h1>
-      </header>
-      <div className="ML-intro">
+      <div className="ML-intro" className="movie-library-grid">
         { movies.length && <MoviesList movies={movies}/> }
       </div>
-    </div>)
+  )
 }
