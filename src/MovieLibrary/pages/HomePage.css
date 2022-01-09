@@ -1,9 +1,11 @@
+
+
 .header {
   height: 100%;
   color: white;
   position: fixed;
   width: 100%;
-  clip-path: polygon(30% 0, 35% 50%, 29% 100%, 0% 100%, 0 51%, 0% 0%);
+  clip-path: polygon(30% 0, 35% 50%, 30% 100%, 0% 100%, 0 51%, 0% 0%);
   background-color: black;
   backdrop-filter: blur(80px);
   z-index: 1;

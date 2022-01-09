@@ -2,8 +2,7 @@
     {
         "adult": false,
         "backdrop_path": "/eENEf62tMXbhyVvdcXlnQz2wcuT.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             878,
             28,
             12
@@ -23,8 +22,7 @@
     {
         "adult": false,
         "backdrop_path": "/VlHt27nCqOuTnuX6bku8QZapzO.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             28,
             12,
             878,
@@ -45,8 +43,7 @@
     {
         "adult": false,
         "backdrop_path": "/7ajHGIAYNMiIzejy1LJWdPrcAx8.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             28,
             35,
             80,
@@ -67,8 +64,7 @@
     {
         "adult": false,
         "backdrop_path": "/5RuR7GhOI5fElADXZb0X2sr9w5n.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             16,
             35,
             10751,
@@ -89,8 +85,7 @@
     {
         "adult": false,
         "backdrop_path": "/1Wlwnhn5sXUIwlxpJgWszT622PS.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             16,
             35,
             10751
@@ -110,8 +105,7 @@
     {
         "adult": false,
         "backdrop_path": "/4LrL40XecjGLRpX5I2gzMTUt04l.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             28,
             18,
             36
@@ -131,8 +125,7 @@
     {
         "adult": false,
         "backdrop_path": "/lyvszvJJqqI8aqBJ70XzdCNoK0y.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             28,
             12,
             18,
@@ -154,8 +147,7 @@
     {
         "adult": false,
         "backdrop_path": "/upOi9aVqPPky7Ba4GsiyFdjc82I.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             37,
             28,
             53
@@ -175,8 +167,7 @@
     {
         "adult": false,
         "backdrop_path": "/r2GAjd4rNOHJh6i6Y0FntmYuPQW.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             12,
             28,
             53
@@ -196,8 +187,7 @@
     {
         "adult": false,
         "backdrop_path": "/uWGPC7j70LE64nbetxQGSSYJO53.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             53,
             10752
         ],
@@ -216,8 +206,7 @@
     {
         "adult": false,
         "backdrop_path": "/lzWHmYdfeFiMIY4JaMmtR7GEli3.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             878,
             12
         ],
@@ -236,8 +225,7 @@
     {
         "adult": false,
         "backdrop_path": "/4JEx2BXhOzuN9pCQcnPSWwCiF0W.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             16,
             35,
             10751
@@ -257,8 +245,7 @@
     {
         "adult": false,
         "backdrop_path": "/4gKxQIW91hOTELjY5lzjMbLoGxB.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             28,
             53,
             878
@@ -278,8 +265,7 @@
     {
         "adult": false,
         "backdrop_path": "/akwg1s7hV5ljeSYFfkw7hTHjVqk.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             16,
             35,
             12,
@@ -300,8 +286,7 @@
     {
         "adult": false,
         "backdrop_path": "/pKgfWzxOpvGV3MQ0kLjLdjKAzUe.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             18,
             80
         ],
@@ -320,8 +305,7 @@
     {
         "adult": false,
         "backdrop_path": "/kbOB9DGl8qwhDRcXOmXfmcmadeD.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             18,
             53
         ],
@@ -340,8 +324,7 @@
     {
         "adult": false,
         "backdrop_path": "/tutaKitJJIaqZPyMz7rxrhb4Yxm.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             16,
             35,
             10751,
@@ -362,8 +345,7 @@
     {
         "adult": false,
         "backdrop_path": "/gg2w8QYf6o5elN95RHtikQaVIsc.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             28,
             18,
             80
@@ -383,8 +365,7 @@
     {
         "adult": false,
         "backdrop_path": "/wfrfxivLOBtGMC98tIr2LSOeKSe.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             16,
             12,
             35,
@@ -405,8 +386,7 @@
     {
         "adult": false,
         "backdrop_path": "/odKqOY6VE6C59YAdGHB0b5Havye.jpg",
-        "genre_ids":
-        [
+        "genre_ids": [
             10751,
             12,
             14

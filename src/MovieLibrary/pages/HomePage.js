@@ -11,7 +11,7 @@ export default function HomePage() {
       }
 
     return(
-        <div>
+        <div className='main-container'>
             <header className="header">
                 <div className='nav-bar'>
 
