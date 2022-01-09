@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {fetchTopRatedMovies} from '../store/actions';
+import moviesActions, {fetchTopRatedMovies} from '../store/actions';
 import './MovieLibrary.css';
 import { getMovies } from '../store/selectors';
 import MovieCard from './MovieCard';
@@ -10,9 +10,10 @@ export default function MovieLibrary() {
   const movies = useSelector(getMovies);
   const [selectedMovie, setSelectedMovie] = useState(null);
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
   useEffect(() => {
-    dispatch(fetchTopRatedMovies())
+    dispatch(moviesActions.fetchAllMovies())
   }, []);
 
   if(movies.length) {
