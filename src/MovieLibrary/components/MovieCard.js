@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import moviesActions from "../store/actions";
+
 import "./MovieCard.css";
 import MovieModal from "./MovieModal";
 
@@ -9,8 +12,9 @@ const MovieCard = ({movie, isSelected, onSelect, handleOver}) => {
     const className = `movie-card ${isSelected ? 'selected' : ''}`;
     const [open, setOpen] = useState(false);
 
+    const dispatch = useDispatch();
     const handleClickOpen = (id) => {
-        console.log(id)
+        dispatch(moviesActions.searchMovieById(id))
         setOpen(true);
     };
 

@@ -1,9 +1,13 @@
 import React from 'react';
 import './MovieModal.css'
 import {  Dialog, Slide } from "@mui/material";
+import { getSelectedMovie } from '../store/selectors';
+import { useSelector } from 'react-redux';
 
 const MovieModal = ({open, setOpen}) => {
 
+    const movieSelected = useSelector(getSelectedMovie);
+    console.log(movieSelected)
     const Transition = React.forwardRef(function Transition(props, ref) {
         return <Slide direction="right" ref={ref} {...props} />;
     });
@@ -23,27 +27,15 @@ const MovieModal = ({open, setOpen}) => {
                 x 
             </div>
             <div className='container-movie-detail'>
-                <div className='image-movie'></div>
+                <div className='image-movie' style={{backgroundImage: `url('https://image.tmdb.org/t/p/w500/${movieSelected[0].poster_path}')`}}></div>
                 <div className='detail-movie'>
                     <h2 className='font-title'>
-                        The Addams Family 2
+                        {movieSelected[0].title}
                     </h2>
                     <hr />
-                    <p className='font-text'>The Addams get tangled up in more wacky adventures and find themselves involved in hilarious run-ins with all sorts of unsuspecting characters.</p>
+                    <p className='font-text'>{movieSelected[0].overview}</p>
                 </div>
             </div>
-            {/* <AppBar sx={{ position: 'relative' }}>
-                <Toolbar>
-                    <IconButton
-                        edge="start"
-                        color="inherit"
-                        onClick={handleClose}
-                        aria-label="close"
-                    >
-                    x
-                    </IconButton>
-                </Toolbar>
-            </AppBar> */}
         </Dialog>
     )
 }
