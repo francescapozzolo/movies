@@ -3,6 +3,7 @@ import './MovieModal.css'
 import {  Dialog, Slide } from "@mui/material";
 import { getSelectedMovie } from '../store/selectors';
 import { useSelector } from 'react-redux';
+import { baseUrlImg } from '../utils';
 
 const MovieModal = ({open, setOpen}) => {
 
@@ -27,7 +28,7 @@ const MovieModal = ({open, setOpen}) => {
                 x 
             </div>
             <div className='container-movie-detail'>
-                <div className='image-movie' style={{backgroundImage: `url('https://image.tmdb.org/t/p/w500/${movieSelected[0].poster_path}')`}}></div>
+                <div className='image-movie' style={{backgroundImage: `url('${baseUrlImg}${movieSelected[0].poster_path}')`}}></div>
                 <div className='detail-movie'>
                     <h2 className='font-title'>
                         {movieSelected[0].title}

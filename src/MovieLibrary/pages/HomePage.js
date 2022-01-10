@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
 import './HomePage.css';
 import MovieLibrary from '../components/MovieLibrary';
+import { getSelectedMovie } from '../store/selectors';
+import { useSelector } from 'react-redux';
+import { baseUrlImg } from '../utils';
 
 export default function HomePage() {
 
     const [sortingType, setSortingType] = useState('');
+    const movieSelected = useSelector(getSelectedMovie);
 
     const handleSortingChange = event => {
         setSortingType(event.target.value)
-      }
+    }
 
     return(
         <div className='main-container'>
@@ -17,7 +21,7 @@ export default function HomePage() {
 
                     <div className='container-avatar-title'>
                         <div id="avatar"></div>
-                        <h1 className='font-title'>Toonflix</h1>
+                        <img src="./logo.png" width="200px"/>
                     </div>
                     
                     <div className='container-options'>
@@ -30,13 +34,14 @@ export default function HomePage() {
                         </select>
                     </div>
 
-                    <div className='img-preview-movie'>
-                        
-                    </div>
                 </div>
+                
+                {movieSelected.length && 
+                    <div className='img-preview-movie' style={{backgroundImage: `url('${baseUrlImg}${movieSelected[0]?.poster_path}')` }}></div>
+                }
             </header>
 
-            <MovieLibrary />
+            <MovieLibrary sortingType={sortingType}/>
 
         </div>
     );

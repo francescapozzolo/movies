@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import moviesActions from "../store/actions";
+import { baseUrlImg } from "../utils";
 
 import "./MovieCard.css";
 import MovieModal from "./MovieModal";
@@ -18,9 +19,13 @@ const MovieCard = ({movie, isSelected, onSelect, handleOver}) => {
         setOpen(true);
     };
 
+    const handleMouseOver = (id) => {
+        dispatch(moviesActions.searchMovieById(id))
+    }
+
     return(
         <>
-            <div className={className} onClick={() => handleClickOpen(id)}  style={ {backgroundImage: `url('https://image.tmdb.org/t/p/w500/${poster_path}')`}}>
+            <div className={className} onClick={() => handleClickOpen(id)} onMouseEnter={() => handleMouseOver(id)} style={ {backgroundImage: `url('${baseUrlImg}${poster_path}')`}}>
                 <div className="coating">
                     <h2 className="font-title" >
                         {title}({vote_average})
