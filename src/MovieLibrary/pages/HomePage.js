@@ -9,14 +9,8 @@ import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
 import ModalSortingOptions from '../components/ModalSortingOptions';
 
 export default function HomePage() {
-
-    const [sortingType, setSortingType] = useState('');
     const [open, setOpen] = useState(false)
     const movieSelected = useSelector(getSelectedMovie);
-
-    const handleSortingChange = event => {
-        setSortingType(event.target.value)
-    }
 
     const handleClickOpen = () => {
         setOpen(true)
@@ -43,7 +37,7 @@ export default function HomePage() {
                 }
             </header>
 
-            <MovieLibrary sortingType={sortingType} setSortingType={setSortingType}/>
+            <MovieLibrary />
             
             {open && <ModalSortingOptions open={open}  setOpen={setOpen}/>}
         </div>

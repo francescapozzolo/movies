@@ -1,4 +1,4 @@
-import { Rating, Stack } from "@mui/material";
+import { Rating } from "@mui/material";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import moviesActions from "../store/actions";
@@ -9,9 +9,7 @@ import TMDBImage from "./TMDBImage";
 
 const MovieCard = ({movie, isSelected}) => {
     const { id, title, vote_average, poster_path } = movie;
-    // const className = `movie-card ${isSelected ? 'selected' : ''}`;
     const [open, setOpen] = useState(false);
-
     const dispatch = useDispatch();
 
     const handleClickOpen = (id) => {

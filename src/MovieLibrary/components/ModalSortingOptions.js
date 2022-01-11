@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './ModalSortingOptions.css'
 import {  Dialog, DialogContent, FormControlLabel, IconButton, Radio, RadioGroup, Rating, Toolbar } from "@mui/material";
-import { getMovies, getSelectedMovie } from '../store/selectors';
+import { getMovies } from '../store/selectors';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import TMDBImage from './TMDBImage';
 
 const ModalSortingOptions = ({open, setOpen}) => {
@@ -20,33 +20,33 @@ const ModalSortingOptions = ({open, setOpen}) => {
     }
 
     const orderMoviesBySortingType = () => {
-    let listSortingMoviesByType
-    switch(sortingType){
-        case 'rating':
-        listSortingMoviesByType = movies.sort((a, b) => b.vote_average - a.vote_average)
-        break;
-        case 'name_asc':
-        listSortingMoviesByType = orderMoviesByTitleAscOrDesd('name_asc')
-        break;
-        case 'name_desc':
-        listSortingMoviesByType = orderMoviesByTitleAscOrDesd('name_desc')
-        break;
-        default:
-        return 
-    }
-    return listSortingMoviesByType
+        let listSortingMoviesByType
+        switch(sortingType){
+            case 'rating':
+                listSortingMoviesByType = movies.sort((a, b) => b.vote_average - a.vote_average)
+            break;
+            case 'name_asc':
+                listSortingMoviesByType = orderMoviesByTitleAscOrDesd('name_asc')
+            break;
+            case 'name_desc':
+                listSortingMoviesByType = orderMoviesByTitleAscOrDesd('name_desc')
+            break;
+            default:
+                return 
+        }
+        return listSortingMoviesByType
     }
       
     const orderMoviesByTitleAscOrDesd = (type) => {
         const listSortingMovies = movies.sort(function (a, b) {
-        if (a.title.toLowerCase() > b.title.toLowerCase()) {
-            return 1;
-        }
-        if (a.title.toLowerCase() < b.title.toLowerCase()) {
-            return -1;
-        }
-        return 0;
-        })
+            if (a.title.toLowerCase() > b.title.toLowerCase()) {
+                return 1;
+            }
+            if (a.title.toLowerCase() < b.title.toLowerCase()) {
+                return -1;
+            }
+            return 0;
+            })
         return type === 'name_asc' ? listSortingMovies : listSortingMovies.reverse()
     }
     
@@ -66,8 +66,7 @@ const ModalSortingOptions = ({open, setOpen}) => {
                 <img src='./logo.png' width="120px" alt="logo" />
             </Toolbar>
             
-            <DialogContent>
-            <div className="modal-container">
+            <DialogContent className="modal-container">
                 <RadioGroup className='sorting-options' row aria-label="orderType" name="row-radio-buttons-group" onChange={() => handleChange(event)}>
                     <FormControlLabel value="name_asc" control={<Radio />} label="A - Z" />
                     <FormControlLabel value="name_desc" control={<Radio />} label="Z - A" />
@@ -87,7 +86,6 @@ const ModalSortingOptions = ({open, setOpen}) => {
                         )
                     })}
                 </div>
-            </div>
             </DialogContent>
         </Dialog>
     )

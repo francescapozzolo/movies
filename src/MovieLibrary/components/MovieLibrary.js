@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import moviesActions from '../store/actions';
 import './MovieLibrary.css';
-import { getMovies, getCurrentPage, getTotalPages } from '../store/selectors';
+import { getMovies, getTotalPages } from '../store/selectors';
 import MovieCard from './MovieCard';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Spinner from './Spinner';
 
-export default function MovieLibrary({sortingType}) {
+export default function MovieLibrary() {
   let movies = useSelector(getMovies);
   let totalPages = useSelector(getTotalPages);
   const moviesToShow = [];

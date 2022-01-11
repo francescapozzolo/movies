@@ -1,5 +1,4 @@
 import {LOAD_MOVIES, LOAD_MOVIE_BY_ID} from '../../../actionTypes'
-import moviesActions from '../actions'
 
 const initialState = {
   movies: [],

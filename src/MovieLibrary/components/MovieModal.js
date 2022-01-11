@@ -5,7 +5,7 @@ import { getSelectedMovie } from '../store/selectors';
 import { useSelector } from 'react-redux';
 import TMDBImage from './TMDBImage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faHeart, faHeartbeat, faPlayCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark, faHeart, faPlayCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const MovieModal = ({open, setOpen}) => {
 
@@ -24,20 +24,21 @@ const MovieModal = ({open, setOpen}) => {
             fullScreen
             open={open}
             TransitionComponent={Transition}
-            className="modal-container"
+            className="dialog"
         >
             <Toolbar onClick={handleClose}>
                 <IconButton
                 edge="start"
                 color="inherit"
                 aria-label="close"
+                className='toolbar-modal'
                 >
                     <FontAwesomeIcon icon={faTimes} color="#C21D17" />
                 </IconButton>
                 <img src='./logo.png' width="120px" alt="logo" />
             </Toolbar>
 
-            <DialogContent>
+            <DialogContent className="content-modal">
                 <div className='container-image-movie'>
                     <div className='image-movie' style={{backgroundImage: `url(${TMDBImage(movieSelected[0].poster_path)})`}}></div>
                 </div>
@@ -56,7 +57,6 @@ const MovieModal = ({open, setOpen}) => {
                     </div>
                 </div> 
             </DialogContent>
-    
         </Dialog>
     )
 }
