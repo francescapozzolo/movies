@@ -3,7 +3,9 @@ import moviesActions from '../actions'
 
 const initialState = {
   movies: [],
-  selectedMovie: {}
+  selectedMovie: {},
+  currentPage: 0,
+  totalPages: 0
 }
 
 export default function (state = initialState, action) {
@@ -14,6 +16,8 @@ export default function (state = initialState, action) {
       return   {
         ...state,
         movies: [...state.movies, ...payload.results],
+        currentPage: payload.page,
+        totalPages: payload.total_pages
       }
     case LOAD_MOVIE_BY_ID:
       return   {

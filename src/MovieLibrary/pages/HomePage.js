@@ -4,6 +4,7 @@ import MovieLibrary from '../components/MovieLibrary';
 import { getSelectedMovie } from '../store/selectors';
 import { useSelector } from 'react-redux';
 import { baseUrlImg } from '../utils';
+import TMDBImage from '../components/TMDBImage';
 
 export default function HomePage() {
 
@@ -37,7 +38,7 @@ export default function HomePage() {
                 </div>
                 
                 {movieSelected.length && 
-                    <div className='img-preview-movie' style={{backgroundImage: `url('${baseUrlImg}${movieSelected[0]?.poster_path}')` }}></div>
+                    <div className='img-preview-movie' style={{backgroundImage: `url(${TMDBImage(movieSelected[0].poster_path)})` }}></div>
                 }
             </header>
 

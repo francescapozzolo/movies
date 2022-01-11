@@ -3,12 +3,12 @@ import './MovieModal.css'
 import {  Dialog, Slide } from "@mui/material";
 import { getSelectedMovie } from '../store/selectors';
 import { useSelector } from 'react-redux';
-import { baseUrlImg } from '../utils';
+import TMDBImage from './TMDBImage';
 
 const MovieModal = ({open, setOpen}) => {
 
     const movieSelected = useSelector(getSelectedMovie);
-    console.log(movieSelected)
+
     const Transition = React.forwardRef(function Transition(props, ref) {
         return <Slide direction="right" ref={ref} {...props} />;
     });
@@ -28,7 +28,7 @@ const MovieModal = ({open, setOpen}) => {
                 x 
             </div>
             <div className='container-movie-detail'>
-                <div className='image-movie' style={{backgroundImage: `url('${baseUrlImg}${movieSelected[0].poster_path}')`}}></div>
+                <div className='image-movie' style={{backgroundImage: `url(${TMDBImage(movieSelected[0].poster_path)})`}}></div>
                 <div className='detail-movie'>
                     <h2 className='font-title'>
                         {movieSelected[0].title}
