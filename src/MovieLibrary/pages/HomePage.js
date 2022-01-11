@@ -33,14 +33,7 @@ export default function HomePage() {
                     </div>
                     
                     <div className='container-options'>
-                        <h3 onClick={() => handleClickOpen()}>Filter options</h3>
-                        {/* <input type="text" placeholder="Search a movie"/>
-                        <select value={sortingType} onChange={()=>handleSortingChange(event)}>
-                            <option value=""></option>
-                            <option value="name_asc">A to Z</option>
-                            <option value="name_desc">Z to A</option>
-                            <option value="rating">Rating</option>
-                        </select> */}
+                        <h3 className="font-title" onClick={() => handleClickOpen()}>Filter options</h3>
                     </div>
 
                 </div>

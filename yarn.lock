@@ -1525,6 +1525,16 @@
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.2.tgz"
   "version" "2.11.2"
 
+"@react-rxjs/core@^0.8.4", "@react-rxjs/core@>=0.1.0":
+  "integrity" "sha512-n+aa0sSrzj3ctBgmHl13nz0a4nKzcDmu+z+WgUtOmRp7niAzs+f02t2D/FyEfvs0Fp1Zq7z2hh5HM2LBlQPAhA=="
+  "resolved" "https://registry.npmjs.org/@react-rxjs/core/-/core-0.8.4.tgz"
+  "version" "0.8.4"
+
+"@react-rxjs/utils@^0.9.3":
+  "integrity" "sha512-arwh1iW+5ciE/fdWwrXXYXF1anyGqBU1WkxvKGZkfxO2sNk+45t9glzHLDWkOUSrMaQeonuTw3vSg7qK/xhJCg=="
+  "resolved" "https://registry.npmjs.org/@react-rxjs/utils/-/utils-0.9.3.tgz"
+  "version" "0.9.3"
+
 "@reduxjs/toolkit@^1.7.1":
   "integrity" "sha512-wXwXYjBVz/ItxB7SMzEAMmEE/FBiY1ze18N+VVVX7NtVbRUrdOGKhpQMHivIJfkbJvSdLUU923a/yAagJQzY0Q=="
   "resolved" "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-1.7.1.tgz"
@@ -7556,6 +7566,13 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
+"rxjs@^7.5.2", "rxjs@>=6":
+  "integrity" "sha512-PwDt186XaL3QN5qXj/H9DGyHhP3/RYYgZZwqBv9Tv8rsAaiwFH1IsJJlcgD37J7UW5a6O67qX0KWKS3/pu0m4w=="
+  "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.5.2.tgz"
+  "version" "7.5.2"
+  dependencies:
+    "tslib" "^2.1.0"
+
 "safe-buffer@^5.0.1", "safe-buffer@^5.1.0", "safe-buffer@>=5.1.0", "safe-buffer@~5.1.0", "safe-buffer@~5.1.1", "safe-buffer@5.1.2":
   "integrity" "sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g=="
   "resolved" "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz"
@@ -8356,7 +8373,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-1.14.1.tgz"
   "version" "1.14.1"
 
-"tslib@^2.0.3":
+"tslib@^2.0.3", "tslib@^2.1.0":
   "integrity" "sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw=="
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.3.1.tgz"
   "version" "2.3.1"

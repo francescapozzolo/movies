@@ -1,0 +1,25 @@
+.modal-container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.header-modal{
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    font-size: 1.5em;
+}
+
+.close-button{
+    color: white;
+    cursor: pointer;
+    width: 2em;
+}
+
+input{
+    border: 1px solid white !important;
+}

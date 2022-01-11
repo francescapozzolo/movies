@@ -3,7 +3,8 @@
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
-}
+    box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.5)
+};
 
 .no-image{
     background-size: contain;

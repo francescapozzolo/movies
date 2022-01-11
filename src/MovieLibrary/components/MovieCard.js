@@ -9,7 +9,7 @@ import TMDBImage from "./TMDBImage";
 
 const MovieCard = ({movie, isSelected}) => {
     const { id, title, vote_average, poster_path } = movie;
-    const className = `movie-card ${isSelected ? 'selected' : ''}`;
+    // const className = `movie-card ${isSelected ? 'selected' : ''}`;
     const [open, setOpen] = useState(false);
 
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const MovieCard = ({movie, isSelected}) => {
 
     return(
         <>
-            <div className={`${poster_path === null && 'no-image'} ${className}`} onClick={() => handleClickOpen(id)} onMouseEnter={() => handleMouseOver(id)} style={ {backgroundImage: `url(${TMDBImage(poster_path)})`}}>
+            <div className={`${poster_path === null && 'no-image'} movie-card`} onClick={() => handleClickOpen(id)} onMouseEnter={() => handleMouseOver(id)} style={ {backgroundImage: `url(${TMDBImage(poster_path)})`}}>
                 <div className="coating">
                     <h2 className="font-title" >
                         {title}
