@@ -12,7 +12,7 @@ const MovieModal = ({open, setOpen}) => {
     const movieSelected = useSelector(getSelectedMovie);
 
     const Transition = React.forwardRef(function Transition(props, ref) {
-        return <Slide direction="right" ref={ref} {...props} />;
+        return <Slide direction="up" ref={ref} {...props} />;
     });
 
     const handleClose = () => {
@@ -23,7 +23,7 @@ const MovieModal = ({open, setOpen}) => {
         <Dialog
             fullScreen
             open={open}
-            // TransitionComponent={Transition}
+            TransitionComponent={Transition}
             className="modal-container"
         >
             <Toolbar onClick={handleClose}>

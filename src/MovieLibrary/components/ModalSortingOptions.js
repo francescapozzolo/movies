@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './ModalSortingOptions.css'
-import {  Dialog, FormControlLabel, Radio, RadioGroup, Slide } from "@mui/material";
+import {  Dialog, DialogContent, FormControlLabel, IconButton, Radio, RadioGroup, Rating, Toolbar } from "@mui/material";
 import { getMovies, getSelectedMovie } from '../store/selectors';
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowCircleLeft, faTimes } from '@fortawesome/free-solid-svg-icons';
+import TMDBImage from './TMDBImage';
 
 const ModalSortingOptions = ({open, setOpen}) => {
     let movies = useSelector(getMovies);
@@ -54,31 +55,40 @@ const ModalSortingOptions = ({open, setOpen}) => {
             fullScreen
             open={open}
         >
+            <Toolbar onClick={handleClose}>
+                <IconButton
+                edge="start"
+                color="inherit"
+                aria-label="close"
+                >
+                    <FontAwesomeIcon icon={faTimes} color="#C21D17" />
+                </IconButton>
+                <img src='./logo.png' width="120px" alt="logo" />
+            </Toolbar>
+            
+            <DialogContent>
             <div className="modal-container">
-                <div className="header-modal" onClick={() => handleClose()}>
-                    <FontAwesomeIcon icon={faArrowCircleLeft} size='2x'/>
-                    <img src="./logo.png" width="200px"/>
-                </div>
-
-                <div className='sorting-options'></div>
-                    <RadioGroup row aria-label="orderType" name="row-radio-buttons-group" onChange={() => handleChange(event)}>
-                        <FormControlLabel value="name_asc" control={<Radio />} label="A - Z" />
-                        <FormControlLabel value="name_desc" control={<Radio />} label="Z - A" />
-                        <FormControlLabel value="rating" control={<Radio />} label="Rating" />
-                   
-                    </RadioGroup>
+                <RadioGroup className='sorting-options' row aria-label="orderType" name="row-radio-buttons-group" onChange={() => handleChange(event)}>
+                    <FormControlLabel value="name_asc" control={<Radio />} label="A - Z" />
+                    <FormControlLabel value="name_desc" control={<Radio />} label="Z - A" />
+                    <FormControlLabel value="rating" control={<Radio />} label="Rating" />
+                </RadioGroup>
                 <div className='movie-list'>
-                    {orderMoviesBySortingType()?.map(movie => {
+                    {(sortingType ? orderMoviesBySortingType() : movies).map(movie => {
                         return (
-                            <div key={movie.id}>
-                                <h2>{movie.title}</h2>
+                            <div className="container-movie" key={movie.id}>
+                                <div className="img" style={{backgroundImage: `url(${TMDBImage(movie.poster_path)})`}}></div>
+                                <div className="details">
+                                    <h2 className='font-text'>{movie.title}</h2>
+                                    <p className='average'>{movie.vote_average}    <Rating className="rating" name="read-only" value={movie.vote_average * 0.5} readOnly precision={0.1} size="small"/></p>
+                                    <p>{movie.overview}</p>
+                                </div>
                             </div>
                         )
                     })}
                 </div>
             </div>
-
-      
+            </DialogContent>
         </Dialog>
     )
 }
