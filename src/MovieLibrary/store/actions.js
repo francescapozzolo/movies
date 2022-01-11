@@ -5,7 +5,7 @@ const moviesActions = {
     fetchAllMovies: (page) => {
         return (dispatch, getState) => {
             try{
-                fetch(`${baseUrl}now_playing?api_key=${api_key}&language=en-US&page=${page}`)
+                fetch(`${baseUrl}/3/movie/now_playing?api_key=${api_key}&language=en-US&page=${page}`)
                 .then(response => response.json())
                 .then(data => {
                     dispatch({

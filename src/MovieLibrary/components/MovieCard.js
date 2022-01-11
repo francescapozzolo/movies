@@ -2,8 +2,6 @@ import { Rating, Stack } from "@mui/material";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import moviesActions from "../store/actions";
-import { baseUrlImg } from "../utils";
-
 import "./MovieCard.css";
 import MovieModal from "./MovieModal";
 import TMDBImage from "./TMDBImage";

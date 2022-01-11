@@ -10,19 +10,23 @@
 }
 
 .nav-bar{
-  padding-top: 2em;
+  width: 30vw;
+  padding-top: 1em;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-  height: 80%
+  height: 90%
 }
 
 .container-avatar-title{
   display: flex;
   align-items: center;
+  padding-right: 1em;
+  background-color: rgba(0,0,0,0.3);
+  width: 100%;
 }
 
 #avatar{
@@ -30,21 +34,37 @@
   height: 60px;
   background-color: white;
   border-radius: 50%;
-  margin-right: 2em;
+  margin: 0 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-avatar{
+  z-index: 1;
+  color: #A31915;
+  width: 65px;
+  height: 65px;
 }
 
 .container-options{
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
+  border: 2px solid #C21D17;
+  padding: 0 1em;
+  border-radius: 10px;
+  color: #C21D17;
+  cursor: pointer;
+}
+
+.container-options h3{
+  margin: 0.5em 0;
 }
 
 .img-preview-movie{
   align-self: flex-end;
-  padding-left: -8em;
-  width: 37vw;
+  width: 35vw;
   background-color: white;
   height: 80vh;
+  margin-top: 3.5em;
   box-shadow: -60px -1px 28px 43px rgba(0,0,0,1) inset;
   -webkit-box-shadow: -60px -1px 28px 43px rgba(0,0,0,1) inset;
   -moz-box-shadow: -60px -1px 28px 43px rgba(0,0,0,1) inset;
